@@ -1,0 +1,483 @@
+/* Contents of this file:
+  * 1.0 - Font imports
+  * 2.0 - Variables
+  * 3.0 - Global CSS
+  * 4.0 - Single-use Components
+  * 5.0 - Utility Classes
+  */
+/* ========================================
+ * 1.0 - FONT IMPORTS 
+ * ======================================= */
+/* open-sans-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-regular.eot"); /* IE9 Compat Modes */
+	src: url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-regular.eot?#iefix")
+			format("embedded-opentype"),
+		/* IE6-IE8 */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-regular.woff2")
+			format("woff2"),
+		/* Super Modern Browsers */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-regular.woff")
+			format("woff"),
+		/* Modern Browsers */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-regular.ttf")
+			format("truetype"),
+		/* Safari, Android, iOS */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-regular.svg#OpenSans")
+			format("svg"); /* Legacy iOS */
+}
+/* open-sans-600 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 600;
+	src: url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-600.eot"); /* IE9 Compat Modes */
+	src: url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-600.eot?#iefix")
+			format("embedded-opentype"),
+		/* IE6-IE8 */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-600.woff2")
+			format("woff2"),
+		/* Super Modern Browsers */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-600.woff")
+			format("woff"),
+		/* Modern Browsers */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-600.ttf")
+			format("truetype"),
+		/* Safari, Android, iOS */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-600.svg#OpenSans")
+			format("svg"); /* Legacy iOS */
+}
+/* open-sans-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 700;
+	src: url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-700.eot"); /* IE9 Compat Modes */
+	src: url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-700.eot?#iefix")
+			format("embedded-opentype"),
+		/* IE6-IE8 */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-700.woff2")
+			format("woff2"),
+		/* Super Modern Browsers */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-700.woff")
+			format("woff"),
+		/* Modern Browsers */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-700.ttf")
+			format("truetype"),
+		/* Safari, Android, iOS */
+			url("./public/fonts/open-sans-v34-latin/open-sans-v34-latin-700.svg#OpenSans")
+			format("svg"); /* Legacy iOS */
+}
+/* titillium-web-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Titillium Web";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-regular.eot"); /* IE9 Compat Modes */
+	src: url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-regular.eot?#iefix")
+			format("embedded-opentype"),
+		/* IE6-IE8 */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-regular.woff2")
+			format("woff2"),
+		/* Super Modern Browsers */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-regular.woff")
+			format("woff"),
+		/* Modern Browsers */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-regular.ttf")
+			format("truetype"),
+		/* Safari, Android, iOS */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-regular.svg#TitilliumWeb")
+			format("svg"); /* Legacy iOS */
+}
+/* titillium-web-600 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Titillium Web";
+	font-style: normal;
+	font-weight: 600;
+	src: url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-600.eot"); /* IE9 Compat Modes */
+	src: url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-600.eot?#iefix")
+			format("embedded-opentype"),
+		/* IE6-IE8 */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-600.woff2")
+			format("woff2"),
+		/* Super Modern Browsers */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-600.woff")
+			format("woff"),
+		/* Modern Browsers */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-600.ttf")
+			format("truetype"),
+		/* Safari, Android, iOS */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-600.svg#TitilliumWeb")
+			format("svg"); /* Legacy iOS */
+}
+/* titillium-web-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Titillium Web";
+	font-style: normal;
+	font-weight: 700;
+	src: url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-700.eot"); /* IE9 Compat Modes */
+	src: url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-700.eot?#iefix")
+			format("embedded-opentype"),
+		/* IE6-IE8 */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-700.woff2")
+			format("woff2"),
+		/* Super Modern Browsers */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-700.woff")
+			format("woff"),
+		/* Modern Browsers */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-700.ttf")
+			format("truetype"),
+		/* Safari, Android, iOS */
+			url("./public/fonts/titillium-web-v15-latin/titillium-web-v15-latin-700.svg#TitilliumWeb")
+			format("svg"); /* Legacy iOS */
+}
+/* sansita-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Sansita";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./public/fonts/sansita-v10-latin/sansita-v10-latin-regular.eot"); /* IE9 Compat Modes */
+	src: url("./public/fonts/sansita-v10-latin/sansita-v10-latin-regular.eot?#iefix")
+			format("embedded-opentype"),
+		/* IE6-IE8 */
+			url("./public/fonts/sansita-v10-latin/sansita-v10-latin-regular.woff2")
+			format("woff2"),
+		/* Super Modern Browsers */
+			url("./public/fonts/sansita-v10-latin/sansita-v10-latin-regular.woff")
+			format("woff"),
+		/* Modern Browsers */
+			url("./public/fonts/sansita-v10-latin/sansita-v10-latin-regular.ttf")
+			format("truetype"),
+		/* Safari, Android, iOS */
+			url("./public/fonts/sansita-v10-latin/sansita-v10-latin-regular.svg#Sansita")
+			format("svg"); /* Legacy iOS */
+}
+/* ========================================
+ * 2.0 - VARIABLES
+ * ======================================= */
+:root {
+	--section-max-width: 62rem;
+
+	--font-family-text: "Open Sans";
+	--font-family-special: "Titillium Web";
+	--font-family-heading: "Sansita";
+
+	--font-weight-regular: 400;
+	--font-weight-bold: 600;
+
+	--font-size-small: clamp(1.05rem, 1vw, 1.15rem);
+	--font-size-normal: clamp(1.25rem, 1.2vw, 1.3rem);
+	--font-size-xl: clamp(1.35rem, 1.3vw, 1.5rem);
+	--font-size-2xl: clamp(1.4rem, 1.5vw, 1.6rem);
+	--font-size-3xl: clamp(2.5rem, 2.75vw, 3.5rem);
+
+	--color-text-light: #5e5e5e;
+	--color-text: #272727;
+	--color-bold: #101010;
+	--color-ultralight: #fff;
+	--color-light: #f8f3ed;
+	--color-medium: #e3d2c0;
+	--color-selection: #c8e5b9;
+}
+/* ========================================
+ * 3.0 - GLOBAL CSS
+ * ======================================= */
+/* SCROLL BEHAVIOUR */
+html {
+	scroll-behavior: smooth;
+}
+section {
+	scroll-margin-top: 4.25rem;
+}
+/* SELECTION */
+::selection {
+	background-color: var(--color-selection);
+	color: var(--color-text);
+}
+::-moz-selection {
+	background-color: var(--color-selection);
+	color: var(--color-text);
+}
+/* SECTIONS */
+.section-bg_light {
+	background-color: var(--color-light);
+	color: var(--color-text);
+}
+.section-bg_medium {
+	background-color: var(--color-medium);
+	color: var(--color-text);
+}
+.--section-bg_image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: var(--color-ultralight);
+}
+/* CONTAINERS */
+.section__container-column {
+	margin: 0 auto;
+	max-width: var(--section-max-width);
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 4.5rem 3rem;
+}
+.section__container-row {
+	margin: auto;
+	max-width: var(--section-max-width);
+	display: flex;
+	gap: 2rem;
+	padding: 4.5rem 3rem;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+/* BUTTON */
+.button {
+	font-family: var(--font-family-text);
+	color: var(--color-text);
+	font-size: var(--font-size-normal);
+	background-color: var(--color-medium);
+	padding: 0.5rem 2rem;
+	border-radius: 0.75rem;
+	width: fit-content;
+	margin-top: 1rem;
+}
+.button a:hover {
+	color: var(--color-ultralight);
+	transition: color 0.5s;
+}
+/* ========================================
+ * 4.0 - SINGLE-USE COMPONENTS
+ * ======================================= */
+/* HEADER */
+.header {
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	user-select: none;
+	-moz-user-select: none;
+}
+.header__container {
+	max-width: var(--section-max-width);
+	display: flex;
+	padding: 1rem 3rem;
+	margin: auto;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+.header__navbar {
+	display: flex;
+	gap: clamp(1.5rem, 2.75vw, 2.5rem);
+	font-family: var(--font-family-text);
+	font-size: var(--font-size-2xl);
+}
+.header__navbar li {
+	width: max-content;
+}
+.header__navbar li:hover {
+	color: var(--color-ultralight);
+	transition: color 0.5s;
+}
+.header__logo {
+	text-align: left;
+	height: 2.25rem;
+	flex: 1 1 20rem;
+}
+.header__logo img {
+	height: 100%;
+}
+.header__rechte-ecke {
+	flex: 1 1 20rem;
+}
+/* SECTION HERO */
+.section-hero {
+	min-height: 100vh;
+	background-image: url(./material/webseite_startbild.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.section-hero__left-item {
+	flex: 1 1 32rem;
+	display: flex;
+	flex-direction: column;
+	gap: var(--font-size-3xl);
+}
+.section-hero__right-item {
+	flex: 1 1 0rem;
+}
+.hero__text {
+	font-family: var(--font-family-special);
+	font-size: var(--font-size-xl);
+	line-height: 2.5rem;
+}
+/* SECTION KURSE */
+.section-kurse__left-item {
+	max-width: 16rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.section-kurse__right-item {
+	max-width: 30rem;
+	display: flex;
+	flex-direction: column;
+	gap: var(--font-size-normal);
+}
+.section-kurse__logo {
+	width: 100%;
+}
+/* SECTION KURSINFOS*/
+.section-kursinfos {
+	background-image: url(./material/1-P1010181.JPG);
+}
+.--s-kursinfos__container {
+	gap: 8rem;
+	justify-content: space-between;
+}
+/* SECTION PREISE */
+
+/* SECTION INHALTE */
+.section-inhalte {
+	background-image: url(./material/photo_gruppe_1.jpeg);
+}
+.carousel {
+	display: flex;
+	gap: 4rem;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+.carousel__container {
+	min-height: 16rem;
+	flex: 0 1 40rem;
+	position: relative;
+	overflow: hidden;
+	transition: height 0.5s;
+}
+.carousel__inhalt-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: absolute;
+	height: 100%;
+}
+.carousel__inhalt {
+	gap: var(--font-size-xl);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.carousel-btn {
+	flex: 0 0 4rem;
+	opacity: 0.7;
+	transition: opacity 0.3s;
+}
+.carousel-btn-white {
+	flex: 0 0 4rem;
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+.carousel-btn:hover {
+	cursor: pointer;
+	opacity: 0.25;
+}
+.carousel-btn-white:hover {
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+/* SECTION UEBER MICH */
+.section-ueber_mich__gallerie {
+	margin: 2rem 0;
+	display: grid;
+	grid-template: 1fr 1fr / 1fr 1fr;
+	grid-gap: 4rem;
+}
+.section-ueber_mich__gallerie img {
+	width: 100%;
+}
+/* SECTION REZENSIONEN */
+
+/* SECTION KONTAKT */
+
+/* SECTION LINKS */
+.section-links {
+	background-image: url(./material/1-P1010181.JPG);
+	min-height: calc(100vh - 4.25rem);
+}
+.section-links__links {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+.section-links__links a:hover {
+	color: var(--color-medium);
+	transition: color 0.5s;
+}
+/* FOOTER */
+.footer {
+	display: flex;
+	padding: 0.5rem;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	transform: translate(0, -100%);
+	width: 100%;
+}
+/* ========================================
+ * 5.0 - UTILITY CLASSES
+ * ======================================= */
+/* TYPOGRAPHY */
+.section-heading {
+	font-family: var(--font-family-heading);
+	font-size: var(--font-size-3xl);
+	line-height: normal;
+}
+.text-special {
+	font-family: var(--font-family-special);
+	font-size: var(--font-size-normal);
+	line-height: normal;
+}
+.text-regular {
+	font-family: var(--font-family-text);
+	font-size: var(--font-size-normal);
+	line-height: normal;
+}
+.text-large {
+	font-family: var(--font-family-text);
+	font-size: var(--font-size-xl);
+	line-height: normal;
+}
+.text-small {
+	font-family: var(--font-family-special);
+	font-size: var(--font-size-small);
+	line-height: normal;
+}
+/* BLOCK UTILITY CLASSES */
+.--text-align-center {
+	text-align: center;
+}
+.--margin-top {
+	margin-top: 1.5rem;
+}
+/* INLINE UTILITY CLASSES */
+b {
+	display: inline;
+	font-weight: var(--font-weight-bold);
+	color: var(--color-bold);
+}
+.--section-bg_image b {
+	color: var(--color-ultralight);
+}
