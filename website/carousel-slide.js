@@ -6,7 +6,7 @@ export function carouselSlideInit(carousels) {
 	for (let carouselSection of carousels) {
 		// create a carousel object for each carousel section element
 		const carousel = {
-			container: carouselSection,
+			container: carouselSection.querySelector(".carousel__container"),
 			slides: Array.from(
 				carouselSection
 					.querySelector(".carousel__container")
@@ -16,13 +16,42 @@ export function carouselSlideInit(carousels) {
 			btnL: carouselSection.querySelector(".btn-l"),
 			btnR: carouselSection.querySelector(".btn-r"),
 			transitionRunning: false,
+			dragging: false,
+			dragStartX: 0,
 		};
 		// adds event listeners
+		// event listeners for the carousel buttons
 		carousel.btnR.addEventListener("click", () => carouselSlide(carousel, "r"));
 		carousel.btnL.addEventListener("click", () => carouselSlide(carousel, "l"));
 		carousel.container.addEventListener("transitionend", () => {
 			carousel.transitionRunning = false;
 		});
+		// event listeners for the carousel drag scrolling
+		carousel.container.addEventListener("pointerdown", (e) => {
+			if (!carousel.transitionRunning) {
+				carousel.dragging = true;
+				carousel.dragStartX = e.clientX;
+				carousel.container.style.cursor = "grabbing";
+			}
+		});
+		carousel.container.addEventListener("pointerup", (e) => {
+			carousel.dragging = false;
+			carousel.container.style.cursor = "grab";
+		});
+		carousel.container.addEventListener("pointermove", (e) => {
+			if (!carousel.transitionRunning && carousel.dragging) {
+				if (carousel.dragStartX - e.clientX > 150) {
+					carouselSlide(carousel, "r");
+					carousel.dragging = false;
+				} else if (e.clientX - carousel.dragStartX > 150) {
+					carouselSlide(carousel, "l");
+					carousel.dragging = false;
+				}
+			}
+		});
+		// sets the style
+		carousel.container.style.cursor = "grab";
+
 		// sets the slides to its initial positions
 		updateSlidePositions(carousel, false);
 	}

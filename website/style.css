@@ -4,6 +4,7 @@
   * 3.0 - Global CSS
   * 4.0 - Single-use Components
   * 5.0 - Utility Classes
+  * 6.0 - Media Queries
   */
 /* ========================================
  * 1.0 - FONT IMPORTS 
@@ -180,6 +181,9 @@
 	--font-size-xl: clamp(1.35rem, 1.3vw, 1.5rem);
 	--font-size-2xl: clamp(1.4rem, 1.5vw, 1.6rem);
 	--font-size-3xl: clamp(2.5rem, 2.75vw, 3.5rem);
+	--font-size-4xl: clamp(3rem, 3.5vw, 4.5rem);
+
+	--header-logo-size: clamp(2.25rem, 2vw, 2.75rem);
 
 	--color-text-light: #5e5e5e;
 	--color-text: #272727;
@@ -197,7 +201,7 @@ html {
 	scroll-behavior: smooth;
 }
 section {
-	scroll-margin-top: 4.25rem;
+	scroll-margin-top: calc(var(--header-logo-size) + 2rem);
 }
 /* SELECTION */
 ::selection {
@@ -263,7 +267,7 @@ section {
 .header {
 	width: 100%;
 	position: fixed;
-	z-index: 999;
+	z-index: 99;
 	user-select: none;
 	-moz-user-select: none;
 }
@@ -284,21 +288,30 @@ section {
 }
 .header__navbar li {
 	width: max-content;
+	transition: color 0.5s;
 }
 .header__navbar li:hover {
 	color: var(--color-ultralight);
-	transition: color 0.5s;
 }
 .header__logo {
 	text-align: left;
-	height: 2.25rem;
+	height: var(--header-logo-size);
 	flex: 1 1 20rem;
+	opacity: 0.8;
 }
 .header__logo img {
 	height: 100%;
 }
 .header__rechte-ecke {
 	flex: 1 1 20rem;
+}
+.hamburger_menu {
+	display: none;
+	transition: opacity 0.1s;
+}
+.hamburger_menu:hover,
+.hamburger_menu:active {
+	opacity: 0.3;
 }
 /* SECTION HERO */
 .section-hero {
@@ -331,13 +344,16 @@ section {
 	gap: 2rem;
 }
 .section-kurse__right-item {
+	width: 100%;
 	max-width: 30rem;
 	display: flex;
 	flex-direction: column;
 	gap: var(--font-size-normal);
+	align-self: stretch;
 }
 .section-kurse__logo {
 	width: 100%;
+	max-width: 13rem;
 }
 /* SECTION KURSINFOS*/
 .section-kursinfos {
@@ -353,15 +369,16 @@ section {
 .section-inhalte {
 	background-image: url(./material/photo_gruppe_1.jpeg);
 }
+/* SECTION CAROUSEL (INHALTE & REZENSIONEN) */
 .carousel {
 	display: flex;
-	gap: 4rem;
+	gap: var(--font-size-4xl);
 	align-items: center;
 	margin-bottom: 2rem;
 }
 .carousel__container {
 	min-height: 16rem;
-	flex: 0 1 40rem;
+	flex: 1 1 40rem;
 	position: relative;
 	overflow: hidden;
 	transition: height 0.5s;
@@ -380,20 +397,18 @@ section {
 	justify-content: center;
 }
 .carousel-btn {
-	flex: 0 0 4rem;
+	flex: 0 0 var(--font-size-4xl);
 	opacity: 0.7;
 	transition: opacity 0.3s;
 }
-.carousel-btn-white {
-	flex: 0 0 4rem;
+.--btn-white {
 	opacity: 1;
-	transition: opacity 0.3s;
 }
 .carousel-btn:hover {
 	cursor: pointer;
 	opacity: 0.25;
 }
-.carousel-btn-white:hover {
+.--btn-white:hover {
 	cursor: pointer;
 	opacity: 0.5;
 }
@@ -403,13 +418,11 @@ section {
 	margin: 2rem 0;
 	display: grid;
 	grid-template: 1fr 1fr / 1fr 1fr;
-	grid-gap: 4rem;
+	grid-gap: var(--font-size-4xl);
 }
 .section-ueber_mich__gallerie img {
 	width: 100%;
 }
-/* SECTION REZENSIONEN */
-
 /* SECTION KONTAKT */
 
 /* SECTION LINKS */
@@ -480,4 +493,102 @@ b {
 }
 .--section-bg_image b {
 	color: var(--color-ultralight);
+}
+/* ========================================
+ * 6.0 - MEDIA QUERIES
+ * ======================================= */
+
+@media screen and (max-width: 768px) {
+	/* VARIABLES */
+	:root {
+		--font-size-normal: clamp(1.1rem, 1vw, 1.15rem);
+		--font-size-xl: clamp(1.2rem, 1.15vw, 1.3rem);
+		--font-size-3xl: clamp(1.65rem, 2.25vw, 2.5rem);
+		--font-size-4xl: clamp(2.5rem, 2.75vw, 3.5rem);
+	}
+	/* GLOBAL CSS */
+	.section__container-row {
+		margin: 0 auto;
+		flex-direction: column;
+		align-items: center;
+	}
+	.button {
+		align-self: center;
+	}
+	/* HEADER */
+	.header__container {
+		padding: 1rem;
+		max-width: none;
+	}
+	.header__logo {
+		flex: none;
+	}
+	.header__navbar {
+		position: fixed;
+		right: 0;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		background-color: var(--color-medium);
+		/* width: 100vw; */
+		padding: 1rem;
+		z-index: 999;
+		align-items: start;
+		height: 100vh;
+		/* gap: 4rem; */
+		transform: translateX(100%);
+	}
+	.header__rechte-ecke {
+		flex: none;
+	}
+	.hamburger_menu {
+		display: block;
+		height: var(--header-logo-size);
+		aspect-ratio: square;
+		align-self: flex-end;
+	}
+	/* SECTION HERO */
+	.section-hero .section-heading {
+		font-size: var(--font-size-4xl);
+	}
+	.section-hero__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.section-hero__left-item {
+		flex: none;
+	}
+	/* SECTION KURSE */
+	.section-kurse__left-item {
+		width: 100%;
+		max-width: none;
+		gap: 1.5rem;
+	}
+	.section-kurse__right-item {
+		max-width: none;
+	}
+	/* SECTION UEBER MICH */
+	.section-ueber_mich__gallerie {
+		margin: 0;
+		grid-gap: 1rem;
+	}
+	/* SECTIONS CAROUSEL (INHALTE & REZENSIONEN) */
+	.carousel {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 1.5rem;
+		margin-bottom: 0;
+		/* flex-direction: column; */
+	}
+	.carousel__container {
+		order: 1;
+	}
+	.carousel-btn {
+		order: 2;
+	}
+	/* TYPOGRAPHY */
+	.section-heading {
+		text-align: center;
+	}
 }
