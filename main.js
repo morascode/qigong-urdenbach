@@ -1,6 +1,5 @@
 import { carouselResizeInit } from "./carousel-resize.js";
 import { carouselSlideInit } from "./carousel-slide.js";
-import { googleMapInit } from "./google-map.js";
 // ===================================
 // CONSTANTS AND VARIABLE DECLARATIONS
 // ======================
