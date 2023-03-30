@@ -40,16 +40,20 @@ export function carouselSlideInit(carousels) {
 		});
 		carousel.container.addEventListener("pointermove", (e) => {
 			if (!carousel.transitionRunning && carousel.dragging) {
-				if (carousel.dragStartX - e.clientX > 150) {
+				let swipeLength;
+				window.innerWidth / 4 > 150
+					? (swipeLength = 150)
+					: (swipeLength = window.innerWidth / 4);
+				if (carousel.dragStartX - e.clientX > swipeLength) {
 					carouselSlide(carousel, "r");
 					carousel.dragging = false;
-				} else if (e.clientX - carousel.dragStartX > 150) {
+				} else if (e.clientX - carousel.dragStartX > swipeLength) {
 					carouselSlide(carousel, "l");
 					carousel.dragging = false;
 				}
 			}
 		});
-		// sets the style
+		// sets the cursor style
 		carousel.container.style.cursor = "grab";
 
 		// sets the slides to its initial positions

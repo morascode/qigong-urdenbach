@@ -395,6 +395,8 @@ section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	user-select: none;
+	-moz-user-select: none;
 }
 .carousel-btn {
 	flex: 0 0 var(--font-size-4xl);
