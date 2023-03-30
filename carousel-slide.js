@@ -28,6 +28,8 @@ export function carouselSlideInit(carousels) {
 		});
 		// event listeners for the carousel drag scrolling
 		carousel.container.addEventListener("pointerdown", (e) => {
+			document.getElementById("testtest1").textContent =
+				"start clientX: " + e.clientX;
 			if (!carousel.transitionRunning) {
 				carousel.dragging = true;
 				carousel.dragStartX = e.clientX;
@@ -37,13 +39,27 @@ export function carouselSlideInit(carousels) {
 		carousel.container.addEventListener("pointerup", (e) => {
 			carousel.dragging = false;
 			carousel.container.style.cursor = "grab";
+			document.getElementById("testtest3").textContent =
+				"end clientX: " + e.clientX;
 		});
 		carousel.container.addEventListener("pointermove", (e) => {
+			document.getElementById("testtest2").textContent =
+				"swipe clientX: " + e.clientX;
 			if (!carousel.transitionRunning && carousel.dragging) {
 				let swipeLength;
 				window.innerWidth / 4 > 150
 					? (swipeLength = 150)
 					: (swipeLength = window.innerWidth / 4);
+				document.getElementById("testtest4").textContent =
+					"swipe needed: " + swipeLength;
+				// console.log(
+				// 	"swipe:" +
+				// 		carousel.dragStartX +
+				// 		", swipe neccessary: " +
+				// 		swipeLength +
+				// 		", client width: " +
+				// 		e.screenX
+				// );
 				if (carousel.dragStartX - e.clientX > swipeLength) {
 					carouselSlide(carousel, "r");
 					carousel.dragging = false;
