@@ -10,16 +10,12 @@ const btnMobileMenuOpen = document.getElementById("btn-mobile-menu_open");
 const btnMobileMenuClose = document.getElementById("btn-mobile-menu_close");
 const navbar = document.getElementById("header__navbar");
 const page = document.querySelector("main");
-const googleMap = document.getElementById("google-map");
 // ===================================
 // INITIALIZE CAROUSELS
 // ======================
 carouselResizeInit([carouselRezensionen, carouselInhalte]);
 carouselSlideInit([carouselRezensionen, carouselInhalte]);
-// ===================================
-// INITIALIZE GOOGLE MAP
-// ======================
-// googleMapInit();
+
 // ===================================
 // MOBILE MENU FUNCTIONALITY
 // ======================

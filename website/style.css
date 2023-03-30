@@ -349,7 +349,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--font-size-normal);
-	align-self: stretch;
+	/* align-self: stretch; */
 }
 .section-kurse__logo {
 	width: 100%;
@@ -530,12 +530,10 @@ b {
 		display: flex;
 		flex-direction: column;
 		background-color: var(--color-medium);
-		/* width: 100vw; */
 		padding: 1rem;
 		z-index: 999;
 		align-items: start;
 		height: 100vh;
-		/* gap: 4rem; */
 		transform: translateX(100%);
 	}
 	.header__rechte-ecke {
