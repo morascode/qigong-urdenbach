@@ -41,9 +41,7 @@ export function carouselSlideInit(carousels) {
 		carousel.container.addEventListener("pointermove", (e) => {
 			if (!carousel.transitionRunning && carousel.dragging) {
 				let swipeLength;
-				window.innerWidth / 4 > 150
-					? (swipeLength = 150)
-					: (swipeLength = window.innerWidth / 4);
+				window.innerWidth / 4 < 150 ? (swipeLength = 9) : (swipeLength = 150);
 
 				if (carousel.dragStartX - e.clientX > swipeLength) {
 					carouselSlide(carousel, "r");

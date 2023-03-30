@@ -382,8 +382,6 @@ section {
 	position: relative;
 	overflow: hidden;
 	transition: height 0.5s;
-	touch-action: none;
-	-ms-touch-action: none;
 }
 .carousel__inhalt-container {
 	display: flex;
