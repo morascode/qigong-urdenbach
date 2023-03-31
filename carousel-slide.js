@@ -41,8 +41,16 @@ export function carouselSlideInit(carousels) {
 		carousel.container.addEventListener("pointermove", (e) => {
 			if (!carousel.transitionRunning && carousel.dragging) {
 				let swipeLength;
-				window.innerWidth / 4 < 150 ? (swipeLength = 9) : (swipeLength = 150);
-
+				if (
+					"ontouchstart" in window ||
+					navigator.maxTouchPoints > 0 ||
+					navigator.msMaxTouchPoints > 0
+				) {
+					swipeLength = 9;
+				} else {
+					swipeLength = 150;
+				}
+				// window.innerWidth / 4 < 150 ? (swipeLength = 9) : (swipeLength = 150);
 				if (carousel.dragStartX - e.clientX > swipeLength) {
 					carouselSlide(carousel, "r");
 					carousel.dragging = false;

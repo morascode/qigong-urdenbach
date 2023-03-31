@@ -316,7 +316,7 @@ section {
 /* SECTION HERO */
 .section-hero {
 	min-height: 100vh;
-	background-image: url(./material/webseite_startbild.jpg);
+	background-image: url(./public/img/hero-img.jpg);
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -357,7 +357,7 @@ section {
 }
 /* SECTION KURSINFOS*/
 .section-kursinfos {
-	background-image: url(./material/1-P1010181.JPG);
+	background-image: url(./public/img/img-2.jpg);
 }
 .--s-kursinfos__container {
 	gap: 8rem;
@@ -367,7 +367,7 @@ section {
 
 /* SECTION INHALTE */
 .section-inhalte {
-	background-image: url(./material/photo_gruppe_1.jpeg);
+	background-image: url(./public/img/img-3.jpg);
 }
 /* SECTION CAROUSEL (INHALTE & REZENSIONEN) */
 .carousel {
@@ -429,7 +429,7 @@ section {
 
 /* SECTION LINKS */
 .section-links {
-	background-image: url(./material/1-P1010181.JPG);
+	background-image: url(./public/img/img-2.jpg);
 	min-height: calc(100vh - 4.25rem);
 }
 .section-links__links {
