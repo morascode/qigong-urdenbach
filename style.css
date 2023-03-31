@@ -559,6 +559,9 @@ b {
 	.section-hero__left-item {
 		flex: none;
 	}
+	.hero__text {
+		line-height: normal;
+	}
 	/* SECTION KURSE */
 	.section-kurse__left-item {
 		width: 100%;
