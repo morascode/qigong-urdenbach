@@ -496,6 +496,10 @@ b {
 .--section-bg_image b {
 	color: var(--color-ultralight);
 }
+.--link-hover:hover {
+	color: var(--color-ultralight);
+	transition: all 0.5s;
+}
 /* ========================================
  * 6.0 - MEDIA QUERIES
  * ======================================= */
