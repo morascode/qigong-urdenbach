@@ -115,31 +115,15 @@
 	</head>
 
 	<body class="section-bg_light">
-		<!----------------------------- HEADER -------------------------------------->
+		<div id="sidebar-shadow" class="sidebar-shadow"></div>
+		<!-- ************************ HEADER ************************ -->
 		<header class="header section-bg_medium">
 			<div class="header__container">
 				<div class="header__logo">
 					<a href="#"><img src="./public/img/logo-qigong-urdenbach.png" /></a>
 				</div>
 				<nav>
-					<ul id="header__navbar" class="header__navbar">
-						<button id="btn-mobile-menu_close" class="hamburger_menu">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								width="100%"
-								height="100%"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M6 18L18 6M6 6l12 12"
-								/>
-							</svg>
-						</button>
+					<ul class="header__navbar">
 						<li><a href="#Kurse">Kurse</a></li>
 						<li><a href="#Ueber_mich">Über mich</a></li>
 						<li><a href="#Kontakt">Kontakt</a></li>
@@ -149,6 +133,7 @@
 				</nav>
 				<div class="header__rechte-ecke">
 					<button id="btn-mobile-menu_open" class="hamburger_menu">
+						<span class="hamburger_menu__label">Menü</span>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
@@ -168,8 +153,40 @@
 				</div>
 			</div>
 		</header>
+		<!-- ************************ SIDEBAR ************************ -->
+		<aside class="sidebar" id="sidebar">
+			<nav>
+				<ul class="sidebar_navbar">
+					<button id="btn-mobile-menu_close" class="hamburger_menu">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							width="100%"
+							height="100%"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M6 18L18 6M6 6l12 12"
+							/>
+						</svg>
+					</button>
+					<li><a href="#Kurse">Kurse</a></li>
+					<li><a href="#Ueber_mich">Über mich</a></li>
+					<li><a href="#Kontakt">Kontakt</a></li>
+					<li><a href="#Rezensionen">Rezensionen</a></li>
+					<li><a href="#Links">Links</a></li>
+					<li class="--margin-top"><a href="/impressum.html">Impressum</a></li>
+					<li><a href="/datenschutz.html">Datenschutzerklärung</a></li>
+				</ul>
+			</nav>
+		</aside>
+		<!-- ************************ MAIN PAGE ************************ -->
 		<main>
-			<!----------------------------- HERO -------------------------------------->
+			<!-- ************************ HERO ************************ -->
 			<section class="section-hero --section-bg_image">
 				<div class="section__container-row">
 					<div class="section-hero__left-item">
@@ -188,7 +205,7 @@
 					<div class="section-hero__right-item"></div>
 				</div>
 			</section>
-			<!----------------------------- SECTION KURSE -------------------------------------->
+			<!-- ************************ SECTION KURSE ************************ -->
 			<section id="Kurse" class="section-bg_light">
 				<div class="section__container-row">
 					<div class="section-kurse__left-item">
@@ -239,7 +256,7 @@
 					</div>
 				</div>
 			</section>
-			<!----------------------------- SECTION KURSINFOS -------------------------------------->
+			<!-- ************************ SECTION KURSINFOS ************************ -->
 			<section class="section-kursinfos --section-bg_image">
 				<div class="section__container-column --s-kursinfos__container">
 					<p class="text-regular">
@@ -260,7 +277,7 @@
 					</p>
 				</div>
 			</section>
-			<!----------------------------- SECTION PREISE -------------------------------------->
+			<!-- ************************ SECTION PREISE ************************ -->
 			<section class="section-bg_light" id="Preise">
 				<div class="section__container-column">
 					<h2 class="section-heading">Preise:</h2>
@@ -278,7 +295,7 @@
 					</p>
 				</div>
 			</section>
-			<!----------------------------- SECTION INHALTE -------------------------------------->
+			<!-- ************************ SECTION INHALTE ************************ -->
 			<section id="Kursinhalte" class="section-inhalte --section-bg_image">
 				<div class="section__container-column">
 					<h2 class="section-heading">Inhalte:</h2>
@@ -362,7 +379,7 @@
 					</div>
 				</div>
 			</section>
-			<!----------------------------- SECTION UEBER MICH -------------------------------------->
+			<!-- ************************ SECTION UEBER MICH ************************ -->
 			<section id="Ueber_mich" class="section-bg_light">
 				<div class="section__container-column">
 					<h2 class="section-heading">Über mich:</h2>
@@ -409,7 +426,7 @@
 					</div>
 				</div>
 			</section>
-			<!----------------------------- SECTION KONTAKT -------------------------------------->
+			<!-- ************************ SECTION KONTAKT ************************ -->
 			<section class="section-bg_medium" id="Kontakt">
 				<div class="section__container-column">
 					<h2 class="section-heading">Kontakt und Anmeldungen:</h2>
@@ -423,7 +440,7 @@
 					</p>
 				</div>
 			</section>
-			<!----------------------------- SECTION REZENSIONEN -------------------------------------->
+			<!-- ************************ SECTION REZENSIONEN ************************ -->
 			<section id="Rezensionen" class="section-bg_light">
 				<div class="section__container-column">
 					<h2 class="section-heading">Rezensionen:</h2>
@@ -559,7 +576,7 @@
 					</div>
 				</div>
 			</section>
-			<!----------------------------- SECTION LINKS -------------------------------------->
+			<!-- ************************ SECTION LINKS ************************ -->
 			<section id="Links" class="section-links --section-bg_image">
 				<div class="section__container-column">
 					<h2 class="section-heading">Links:</h2>
@@ -617,9 +634,19 @@
 				</div>
 			</section>
 		</main>
-		<!----------------------------- FOOTER  -------------------------------------->
+		<!-- ************************ MAIN PAGE ************************ -->
+		<!-- ************************ FOOTER  ************************ -->
 		<footer class="footer section-bg_medium">
-			<small class="text-small"> © 2023 Qigong Urdenbach </small>
+			<small class="text-small"> © 2023 Yevgeniya Rimbach-Khersonska </small>
+			<nav class="footer__nav">
+				<a href="#Kontakt"><small class="text-small"> Kontakt </small></a>
+				<a href="/impressum.html"
+					><small class="text-small">Impressum </small></a
+				>
+				<a href="/datenschutz.html"
+					><small class="text-small"> Datenschutzerklärung </small></a
+				>
+			</nav>
 		</footer>
 	</body>
 </html>
