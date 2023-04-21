@@ -334,7 +334,7 @@ section {
 	z-index: 999;
 	align-items: start;
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	transform: translateX(100%);
 	transition: transform 1.3s;
 }
