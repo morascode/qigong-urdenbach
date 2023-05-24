@@ -3,6 +3,10 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="reset.css" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link
+			rel="canonical"
+			href="https://www.qigong-urdenbach.de/datenschutz.html"
+		/>
 		<meta
 			name="description"
 			content="Qigong Kurse in Urdenbach, Düsseldorf, geleitet von Yevgeniya Rimbach-Khersonska"
@@ -116,7 +120,7 @@
 		<header class="header section-bg_medium">
 			<div class="header__container">
 				<div class="header__logo">
-					<a href="#"
+					<a href="/#top"
 						><img
 							alt="Qigong Urdenbach Logo"
 							src="./public/img/logo-qigong-urdenbach.png"
@@ -124,15 +128,19 @@
 				</div>
 				<nav>
 					<ul class="header__navbar">
-						<li><a href="#Kurse">Kurse</a></li>
-						<li><a href="#Ueber_mich">Über mich</a></li>
-						<li><a href="#Kontakt">Kontakt</a></li>
-						<li><a href="#Rezensionen">Rezensionen</a></li>
-						<li><a href="#Links">Links</a></li>
+						<li><a href="/#Kurse">Kurse</a></li>
+						<li><a href="/#Ueber_mich">Über mich</a></li>
+						<li><a href="/#Kontakt">Kontakt</a></li>
+						<li><a href="/#Rezensionen">Rezensionen</a></li>
+						<li><a href="/#Links">Links</a></li>
 					</ul>
 				</nav>
 				<div class="header__rechte-ecke">
-					<button id="btn-mobile-menu_open" class="hamburger_menu">
+					<button
+						id="btn-mobile-menu_open"
+						class="hamburger_menu"
+						aria-label="Menü öffnen"
+					>
 						<span class="hamburger_menu__label">Menü</span>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -155,25 +163,29 @@
 		</header>
 		<!-- ************************ SIDEBAR ************************ -->
 		<aside class="sidebar" id="sidebar">
-			<nav>
-				<ul class="sidebar_navbar">
-					<button id="btn-mobile-menu_close" class="hamburger_menu">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							width="100%"
-							height="100%"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M6 18L18 6M6 6l12 12"
-							/>
-						</svg>
-					</button>
+			<nav class="--flex-col">
+				<button
+					id="btn-mobile-menu_close"
+					class="hamburger_menu"
+					aria-label="Menü schließen"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						width="100%"
+						height="100%"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
+				</button>
+				<ul class="--flex-col">
 					<li><a href="/#Kurse">Kurse</a></li>
 					<li><a href="/#Ueber_mich">Über mich</a></li>
 					<li><a href="/#Kontakt">Kontakt</a></li>

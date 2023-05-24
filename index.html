@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="reset.css" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="canonical" href="https://www.qigong-urdenbach.de/" />
 		<meta
 			name="google-site-verification"
 			content="TzPlV9n0sXcSNNhaODAd8IN8jcRl4uHN_IfBvijgnVM"
@@ -163,34 +164,34 @@
 		</header>
 		<!-- ************************ SIDEBAR ************************ -->
 		<aside class="sidebar" id="sidebar">
-			<nav>
-				<ul class="sidebar_navbar">
-					<button
-						id="btn-mobile-menu_close"
-						class="hamburger_menu"
-						aria-label="Menü schließen"
+			<nav class="--flex-col">
+				<button
+					id="btn-mobile-menu_close"
+					class="hamburger_menu"
+					aria-label="Menü schließen"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						width="100%"
+						height="100%"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							width="100%"
-							height="100%"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M6 18L18 6M6 6l12 12"
-							/>
-						</svg>
-					</button>
-					<li><a href="#Kurse">Kurse</a></li>
-					<li><a href="#Ueber_mich">Über mich</a></li>
-					<li><a href="#Kontakt">Kontakt</a></li>
-					<li><a href="#Rezensionen">Rezensionen</a></li>
-					<li><a href="#Links">Links</a></li>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
+				</button>
+				<ul class="--flex-col">
+					<li><a href="/#Kurse">Kurse</a></li>
+					<li><a href="/#Ueber_mich">Über mich</a></li>
+					<li><a href="/#Kontakt">Kontakt</a></li>
+					<li><a href="/#Rezensionen">Rezensionen</a></li>
+					<li><a href="/#Links">Links</a></li>
 					<li class="--margin-top"><a href="/impressum.html">Impressum</a></li>
 					<li><a href="/datenschutz.html">Datenschutzerklärung</a></li>
 				</ul>
@@ -209,9 +210,9 @@
 								entspannend, fördert die Haltung, erhält das Gleichgewicht und
 								macht Spaß.”
 							</p>
-							<button class="button --margin-top">
-								<a href="#Kurse">zu den Kursen</a>
-							</button>
+							<a href="#Kurse" class="button --margin-top">
+								<button class="--cursor-pointer">zu den Kursen</button></a
+							>
 						</div>
 					</div>
 					<div class="section-hero__right-item"></div>
@@ -239,9 +240,9 @@
 							<br />
 							Sonntagskurs 10-11 Uhr
 						</p>
-						<button class="button">
-							<a href="#Preise">Preise</a>
-						</button>
+						<a href="#Preise" class="button">
+							<button class="--cursor-pointer">Preise</button></a
+						>
 					</div>
 					<div class="section-kurse__right-item">
 						<!-- <iframe

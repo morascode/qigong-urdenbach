@@ -247,6 +247,7 @@ section {
 }
 /* BUTTON */
 .button {
+	display: block;
 	font-family: var(--font-family-text);
 	color: var(--color-text);
 	font-size: var(--font-size-normal);
@@ -255,8 +256,9 @@ section {
 	border-radius: 0.75rem;
 	width: fit-content;
 	margin-top: 1rem;
+	transition: color 0.5s;
 }
-.button a:hover {
+.button:hover {
 	color: var(--color-ultralight);
 	transition: color 0.5s;
 }
@@ -337,9 +339,6 @@ section {
 	width: 100%;
 	transform: translateX(100%);
 	transition: transform 1.3s;
-}
-.sidebar_navbar {
-	display: flex;
 	flex-direction: column;
 	gap: var(--font-size-2xl);
 	font-family: var(--font-family-text);
@@ -539,6 +538,11 @@ section {
 	line-height: normal;
 }
 /* BLOCK UTILITY CLASSES */
+.--flex-col {
+	display: flex;
+	flex-direction: column;
+	gap: inherit;
+}
 .--text-align-center {
 	text-align: center;
 }
@@ -550,6 +554,9 @@ section {
 }
 .--p-top-header {
 	padding-top: calc(var(--header-logo-size) + 2rem);
+}
+.--cursor-pointer {
+	cursor: pointer;
 }
 /* INLINE UTILITY CLASSES */
 b {
