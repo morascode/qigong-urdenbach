@@ -243,7 +243,7 @@ section {
 	gap: 2rem;
 	padding: 4.5rem 3rem;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: flex-start;
 }
 /* BUTTON */
 .button {
@@ -261,6 +261,18 @@ section {
 .button:hover {
 	color: var(--color-ultralight);
 	transition: color 0.5s;
+}
+/* FLEX CONTAINER*/
+.flexbox-row {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+/* ICONS */
+.icon-large {
+	height: var(--font-size-xl);
 }
 /* ========================================
  * 4.0 - SINGLE-USE COMPONENTS
@@ -383,10 +395,11 @@ section {
 }
 /* SECTION KURSE */
 .section-kurse__left-item {
-	max-width: 16rem;
+	max-width: 17rem;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	min-width: 15rem;
 }
 .section-kurse__right-item {
 	width: 100%;
@@ -394,7 +407,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--font-size-normal);
-	/* align-self: stretch; */
+	align-self: stretch;
 }
 .section-kurse__logo {
 	width: 100%;
@@ -557,6 +570,12 @@ section {
 }
 .--cursor-pointer {
 	cursor: pointer;
+}
+.button--light {
+	background-color: var(--color-light);
+}
+.button--light:hover {
+	color: var(--color-medium);
 }
 /* INLINE UTILITY CLASSES */
 b {
