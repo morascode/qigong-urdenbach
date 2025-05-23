@@ -482,6 +482,8 @@ section {
 }
 .section-ueber_mich__gallerie img {
 	width: 100%;
+	object-fit: cover;
+	aspect-ratio: 2/3;
 }
 /* SECTION KONTAKT */
 
