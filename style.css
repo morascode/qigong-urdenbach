@@ -395,7 +395,7 @@ section {
 }
 /* SECTION KURSE */
 .section-kurse__left-item {
-	max-width: 17rem;
+	max-width: 19rem;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
@@ -416,10 +416,7 @@ section {
 /* SECTION KURSINFOS*/
 .section-kursinfos {
 	background-image: url(./public/img/img-2.jpg);
-}
-.--s-kursinfos__container {
-	gap: 8rem;
-	justify-content: space-between;
+	min-height: 28rem;
 }
 /* SECTION PREISE */
 
@@ -477,7 +474,7 @@ section {
 .section-ueber_mich__gallerie {
 	margin: 2rem 0;
 	display: grid;
-	grid-template: 1fr 1fr / 1fr 1fr;
+	grid-template: 1fr / 1fr 1fr;
 	grid-gap: var(--font-size-4xl);
 }
 .section-ueber_mich__gallerie img {
@@ -676,6 +673,10 @@ b {
 	.section-ueber_mich__gallerie {
 		margin: 0;
 		grid-gap: 1rem;
+	}
+	/* SECTION KURSINFOS*/
+	.section-kursinfos {
+		min-height: 14rem;
 	}
 	/* SECTIONS CAROUSEL (INHALTE & REZENSIONEN) */
 	.carousel {
